@@ -12,7 +12,7 @@ const repositories = [];
 
 app.get("/repositories", (request, response) => {
   if (repositories.length === 0) {
-    return response.status(204);
+    return response.status(204).send();
   }
 
   return response.json(repositories);
